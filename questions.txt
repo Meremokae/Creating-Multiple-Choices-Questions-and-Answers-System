@@ -1,0 +1,80 @@
+QUESTION 1 : What is a shell script?
+a) group of commands
+b) a file containing special symbols
+c) a file containing a series of commands
+d) group of functions
+Done
+Answer for Q1: C) a file containing a series of commands
+
+QUESTION 2 : Shell scripts need to be saved with an extension .sh
+a) True
+b) False
+Done
+Answer for Q2: B) False
+
+QUESTION 3 : Shell scripts are executed in a separate child shell process.
+a) True
+b) False
+Done
+Answer for Q3: A) True
+
+QUESTION 4 : The first line in any shell script begins with a _____
+a) &
+b) !
+c) $
+d) #
+Done
+Answer for Q4: D) #
+
+QUESTION 5 : To run the script, we should make it executable first by using _____
+a) chmod +x
+b) chmod +r
+c) chmod +w
+d) chmod +rwx
+Done
+Answer for Q5: A) chmod +x
+
+QUESTION 6 : To spawn a child of our own choice for running the script, we can use ___ command.
+a) ps
+b) pr
+c) sh
+d) $$
+Done
+Answer for Q6: C) sh
+
+QUESTION 7 : Which command is used for making the scripts interactive?
+a) ip
+b) input
+c) read
+d) write
+Done
+Answer for Q7: C) read
+
+QUESTION 8 : read command is shell’s internal tool.
+a) True
+b) False
+Done
+Answer for Q8: A) True
+
+QUESTION 9 : A single read statement can be used with one or more variables.
+a) True
+b) False
+Done
+Answer for Q9: A) True
+
+QUESTION 10 : What are positional parameters?
+a) special variables for assigning arguments from the command line
+b) pattern matching parameters
+c) special variables for reading user input
+d) special variables and patterns
+Done
+Answer for Q10: A) special variables for assigning arguments from the command line
+
+QUESTION 11 : Which of the following commands let us perform a set of instructions
+a) for
+b) while
+c) until
+d) for, while, until
+Done
+Answer for Q11: D) for, while, until
+

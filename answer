@@ -1,0 +1,25 @@
+#!/bin/bash
+
+clear
+
+line=`awk 'END { print NR }' compact.txt`
+
+noq=`expr $line + 1`
+noq=`expr $noq / 3`
+
+DIFF=$(($noq-1+1))
+
+read -p "How many answer would you like to answer out of $noq questions: " aq
+
+for i in `seq 1 $aq`
+do
+	R=$(($(($RANDOM%$DIFF))+1))
+	echo $R
+	echo -e "`awk '$2 == "'"$R"'",/^Done/' questions.txt`"
+	source getCorrectAnswer
+	read -p "Your Answer: " a
+	echo "QUESTION $R: $a)" >> answers.txt
+	echo >> answers.txt
+done
+
+source getScore

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+clear
+
+read -p "Is this your first time generating questions? (y/n) " flag
+if [ "$flag" = "n" ]; then
+	echo -n >compact.txt	
+	cont=`awk '/^QUESTION/ {a=$2} END{ print a }' questions.txt`
+	echo -e "Resuming from question $cont...\n"
+	read -p "Input the next number of questions: " n
+	n=`expr $n + $cont`
+	cont=`expr $cont + 1`
+	for i in `seq $cont $n`
+	do
+	read -p "Question $i: " s
+	echo -e "QUESTION $i : $s" >> questions.txt
+	until [ "$a" = "Done" ]; do
+		read -p "Answer: " a
+		echo "$a" >> questions.txt
+	done
+	read -p "Correct Answer: " c
+	echo "Answer for Q$i: $c" >> questions.txt
+	a=""
+	echo >> questions.txt
+	done
+	source generateCompactList
+elif [ "$flag" = "y" ]; then
+	echo -n >compact.txt
+	read -p "Input number of question: " n
+	for i in `seq 1 $n`
+	do
+		read -p "Question $i: " s
+		echo "QUESTION $i : $s" >> questions.txt
+		until [ "$a" = "Done" ]; do
+			read -p "Answer: " a
+			echo "$a" >> questions.txt
+		done
+		read -p "Correct Answer: " c
+		echo "Answer for Q$i: $c" >> questions.txt
+		a=""
+		echo >> questions.txt
+	done
+	source generateCompactList
+else
+	echo "Invalid input..Exiting"
+	exit 0
+fi		

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#echo -e "`awk '$2 == "'"$R"'"' questions.txt`"
+echo -e "`awk '$3 == "Q'"$R"':" { print $4 }' questions.txt`" >> correctAnswer.txt

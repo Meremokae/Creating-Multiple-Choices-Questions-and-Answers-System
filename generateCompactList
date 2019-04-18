@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo -e "`awk -F'[.,:] *' '        
+  /^[A-E]\./ {            
+    i=$1
+   $1=x
+   A[i]=$0
+    choice=1
+    next
+  }
+  choice {
+    A[i]=A[i] RS $0
+  }
+  /^Answer/{            
+    choice=0
+    for(i=2; i<=NF; i++)
+      print $i"." A[$i]
+    print x               
+  }
+  /^QUESTION/             
+' questions.txt`" >> compact.txt

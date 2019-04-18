@@ -1,0 +1,32 @@
+QUESTION 1 : What is a shell script?
+C) a file containing a series of commands.
+
+QUESTION 2 : Shell scripts need to be saved with an extension .sh
+B) False.
+
+QUESTION 3 : Shell scripts are executed in a separate child shell process.
+A) True.
+
+QUESTION 4 : The first line in any shell script begins with a _____
+D) #.
+
+QUESTION 5 : To run the script, we should make it executable first by using _____
+A) chmod +x.
+
+QUESTION 6 : To spawn a child of our own choice for running the script, we can use ___ command.
+C) sh.
+
+QUESTION 7 : Which command is used for making the scripts interactive?
+C) read.
+
+QUESTION 8 : read command is shell’s internal tool.
+A) True.
+
+QUESTION 9 : A single read statement can be used with one or more variables.
+A) True.
+
+QUESTION 10 : What are positional parameters?
+A) special variables for assigning arguments from the command line.
+
+QUESTION 11 : Which of the following commands let us perform a set of instructions
+D) for.while.until.

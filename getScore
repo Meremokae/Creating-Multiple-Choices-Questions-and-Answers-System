@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#line=`awk 'END { print NR }' compact.txt`
+
+#noq=`expr $line + 1`
+#noq=`expr $noq / 3`
+
+loop=`expr $aq - 1`
+
+a=(`awk '/^QUESTION/ { print $3 }' answers.txt`)
+q=(`awk '/^[A-E]/ { print $1 }' correctAnswer.txt`)
+
+point=`echo "scale=2;10/$aq" | bc`
+
+mark=0
+count=0 
+ 
+for i in `seq 0 $loop`
+do
+	if [ "${a[$i]}" == "${q[$i]}" ]; then
+		mark=`echo "scale=2;$mark+$point" | bc` 
+		count=`expr $count + 1`
+	fi
+done
+
+echo -e "Diem: $mark\nSo cau dung: $count/$aq"
+echo -e "Diem: $mark\nSo cau dung: $count/$aq" >> answers.txt
+
+
+	
+
+
+
